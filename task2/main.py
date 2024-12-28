@@ -12,10 +12,10 @@ def SaveDictionary(file_path, dictionary):
 
 def Add(dictionary, file_path):
   word = input("请输入英文单词:")
-  meaning = input("请输入中文释义:")
   if word in dictionary:
-    print("该单词已添加到字典库")
+    print("单词已存在")
   else:
+    meaning = input("请输入中文释义:")
     dictionary[word] = meaning
     SaveDictionary(file_path, dictionary)
     print("单词添加成功")
